@@ -1,3 +1,9 @@
+
+import About from "./component/About";
+import Projects from "./component/Projects"
+import Skills from "./component/Skills";
+import Experience from "./component/Experience";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
@@ -120,37 +126,13 @@ export default function Home() {
       </section>
 
       {/* Temporary section anchors */}
-      <section
-        id="about"
-        className="border-t border-white/10 px-6 py-16 text-center"
-      >
-        <h2 className="text-3xl font-bold">About Me</h2>
-        <p className="mt-3 text-slate-400">Coming next...</p>
-      </section>
+     <About />
 
-      <section
-        id="projects"
-        className="border-t border-white/10 px-6 py-16 text-center"
-      >
-        <h2 className="text-3xl font-bold">Projects</h2>
-        <p className="mt-3 text-slate-400">Coming next...</p>
-      </section>
+     <Projects />
 
-      <section
-        id="skills"
-        className="border-t border-white/10 px-6 py-16 text-center"
-      >
-        <h2 className="text-3xl font-bold">Skills</h2>
-        <p className="mt-3 text-slate-400">Coming next...</p>
-      </section>
+     <Skills />
 
-      <section
-        id="contact"
-        className="border-t border-white/10 px-6 py-16 text-center"
-      >
-        <h2 className="text-3xl font-bold">Lets Connect</h2>
-        <p className="mt-3 text-slate-400">More contact details coming next.</p>
-      </section>
+      <Experience />
 
       <footer className="border-t border-white/10 px-6 py-6 text-center text-sm text-slate-500">
         © {new Date().getFullYear()} Sanjida Akter Sima. All rights reserved.

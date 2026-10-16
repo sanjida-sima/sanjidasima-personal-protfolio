@@ -1,34 +1,34 @@
-
+import Image from "next/image";
 const projects = [
   {
     number: "01",
     title: "HTML & CSS Project",
     description:
-      "A website built with HTML and CSS. Replace this text with the actual features of your project.",
+      "A website built with HTML and CSS to practice page structure, styling, and responsive layouts.",
     image: "/projects/projects-1.png",
     technologies: ["HTML5", "CSS3"],
-    github: "",
-    demo: "",
+    github: "https://github.com/sanjida-sima/B14-A01-DEVCONFO-1",
+    demo: "https://sanjida-sima.github.io/B14-A01-DEVCONFO-1/",
   },
   {
     number: "02",
     title: "React Project",
     description:
-      "A React application built with reusable components and interactive UI. Update this with your project's actual purpose.",
+      "A React application built to practice reusable components, interactive interfaces, and modern frontend development.",
     image: "/projects/projects-2.png",
-    technologies: ["React", "JavaScript"],
-    github: "",
-    demo: "",
+    technologies: ["React", "JavaScript", "CSS"],
+    github: "https://github.com/sanjida-sima/B14-A05-Devstack",
+    demo: "https://astounding-croissant-a8714a.netlify.app/",
   },
   {
     number: "03",
     title: "Next.js Project",
     description:
-      "A modern web application built with Next.js. Add the real features and functionality of your project here.",
+      "A web application built with Next.js and TypeScript while learning modern full-stack web development.",
     image: "/projects/projects-3.png",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    github: "",
-    demo: "",
+    github: "https://github.com/sanjida-sima/my-assignment-a6-",
+    demo: "https://my-assignment-a6.vercel.app/",
   },
 ];
 
@@ -36,21 +36,21 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="border-t border-white/10 bg-slate-950 px-6 py-24 text-white"
+      className="bg-slate-900 px-6 py-24 text-white sm:px-10 lg:px-20"
     >
       <div className="mx-auto max-w-7xl">
-        <div className="mb-16 text-center">
-          <p className="mb-3 text-sm font-semibold tracking-[0.3em] text-cyan-400 uppercase">
+        <div className="mb-14">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
             My Work
           </p>
 
-          <h2 className="text-4xl font-bold sm:text-5xl">
-            Featured <span className="text-cyan-400">Projects</span>
+          <h2 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
+            Featured Projects
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl leading-7 text-slate-400">
-            Explore my projects and see what I have been building
-            throughout my web development journey.
+          <p className="mt-5 max-w-2xl leading-7 text-slate-400">
+            Here are some projects I have worked on while learning web
+            development and improving my technical skills.
           </p>
         </div>
 
@@ -58,26 +58,26 @@ export default function Projects() {
           {projects.map((project) => (
             <article
               key={project.number}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70 transition duration-300 hover:-translate-y-2 hover:border-cyan-400/50 hover:shadow-xl hover:shadow-cyan-500/10"
+              className="group overflow-hidden rounded-2xl border border-white/10 bg-slate-950 transition duration-300 hover:-translate-y-2 hover:border-cyan-400/40"
             >
-              <div className="overflow-hidden border-b border-white/10 bg-slate-800">
-                <img
+              <div className="overflow-hidden">
+                <Image
                   src={project.image}
                   alt={`${project.title} screenshot`}
+                  width={800}
+                  height={500}
                   className="h-52 w-full object-cover object-top transition duration-500 group-hover:scale-105"
                 />
               </div>
 
-              <div className="flex flex-1 flex-col p-6">
-                <p className="text-xs font-bold tracking-widest text-cyan-400">
+              <div className="p-6">
+                <p className="mb-3 text-sm font-semibold tracking-widest text-cyan-400">
                   PROJECT {project.number}
                 </p>
 
-                <h3 className="mt-3 text-xl font-semibold transition group-hover:text-cyan-400">
-                  {project.title}
-                </h3>
+                <h3 className="text-xl font-bold">{project.title}</h3>
 
-                <p className="mt-3 flex-1 text-sm leading-7 text-slate-400">
+                <p className="mt-3 text-sm leading-7 text-slate-400">
                   {project.description}
                 </p>
 
@@ -85,7 +85,7 @@ export default function Projects() {
                   {project.technologies.map((technology) => (
                     <span
                       key={technology}
-                      className="rounded-md border border-cyan-400/10 bg-cyan-400/10 px-3 py-1.5 text-xs text-cyan-300"
+                      className="rounded-full border border-white/10 px-3 py-1 text-xs text-slate-300"
                     >
                       {technology}
                     </span>
@@ -103,8 +103,8 @@ export default function Projects() {
                       Live Demo ↗
                     </a>
                   ) : (
-                    <span className="rounded-full border border-white/10 px-4 py-2.5 text-xs text-slate-500">
-                      Live link not added
+                    <span className="rounded-full border border-white/10 px-5 py-2.5 text-sm text-slate-500">
+                      Live link coming soon
                     </span>
                   )}
 
@@ -113,13 +113,13 @@ export default function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="rounded-full border border-white/20 px-5 py-2.5 text-sm transition hover:border-cyan-400 hover:text-cyan-400"
+                      className="rounded-full border border-white/20 px-5 py-2.5 text-sm font-semibold transition hover:border-cyan-400 hover:text-cyan-400"
                     >
                       GitHub ↗
                     </a>
                   ) : (
-                    <span className="rounded-full border border-white/10 px-4 py-2.5 text-xs text-slate-500">
-                      GitHub link not added
+                    <span className="rounded-full border border-white/10 px-5 py-2.5 text-sm text-slate-500">
+                      GitHub coming soon
                     </span>
                   )}
                 </div>

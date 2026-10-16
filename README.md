@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Hi, I'm Sanjida Akter Sima 👋
 
-## Getting Started
+Aspiring Full-Stack Web Developer
 
-First, run the development server:
+I'm a web development learner from Bangladesh, passionate about building modern, responsive, and user-friendly web applications. I'm continuously learning new technologies and improving my programming skills by building projects.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🚀 About Me
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🌱 Currently learning Full-Stack Web Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+💻 Exploring React, Next.js, TypeScript, and MongoDB
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🎯 Focused on improving my problem-solving and development skills
 
-## Learn More
+📚 Believe in learning by building real projects
 
-To learn more about Next.js, take a look at the following resources:
+🌍 Open to learning opportunities and collaboration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🛠️ Technologies & Tools
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Frontend
 
-## Deploy on Vercel
+HTML5
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+CSS3
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+JavaScript
+
+TypeScript
+
+React
+
+Next.js
+
+Tailwind CSS
+
+Backend & Database
+
+Node.js
+
+Express.js
+
+MongoDB
+
+Tools
+
+Git
+
+GitHub
+
+VS Code
+
+📌 Featured Project
+
+Personal Portfolio Website
+
+A personal portfolio website showcasing my skills, projects, and journey as a web developer.
+
+Built with: Next.js · React · TypeScript · Tailwind CSS
+
+🔗 Connect With Me
+
+GitHub: github.com/sanjida-sima
+
+LinkedIn: Connect with me
+
+Email: simasanjida8@gmail.com
+
+Learning, building, and improving — one project at a time. ✨
+protfolio live link (https://sima-portfolio-2026.vercel.app/)

@@ -1,3 +1,6 @@
+
+"use client";
+
 import { useState } from "react";
 
 const navLinks = [
@@ -6,7 +9,7 @@ const navLinks = [
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
-  { label: "Resume", href: "/resume.pdf", isResume: true },
+  { label: "Resume", href: "/image/resume.pdf", isResume: true },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -112,3 +115,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

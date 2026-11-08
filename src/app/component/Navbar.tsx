@@ -1,6 +1,3 @@
-
-"use client";
-
 import { useState } from "react";
 
 const navLinks = [
@@ -9,6 +6,7 @@ const navLinks = [
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
+  { label: "Resume", href: "/resume.pdf", isResume: true },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -18,6 +16,8 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur-lg">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+
+        {/* Logo */}
         <a
           href="#home"
           onClick={() => setMenuOpen(false)}
@@ -26,11 +26,14 @@ export default function Navbar() {
           Sima<span className="text-cyan-400">.</span>
         </a>
 
+        {/* Desktop Navigation */}
         <div className="hidden items-center gap-7 text-sm text-slate-300 lg:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
+              target={link.isResume ? "_blank" : undefined}
+              rel={link.isResume ? "noopener noreferrer" : undefined}
               className="transition hover:text-cyan-400"
             >
               {link.label}
@@ -38,13 +41,15 @@ export default function Navbar() {
           ))}
         </div>
 
+        {/* Let's Talk Button */}
         <a
           href="#contact"
           className="hidden rounded-full border border-cyan-400 px-5 py-2 text-sm font-medium text-cyan-300 transition hover:bg-cyan-400 hover:text-slate-950 sm:inline-flex"
         >
-          Let&apos;s Talk
+          Lets Talk
         </a>
 
+        {/* Mobile Menu Button */}
         <button
           type="button"
           aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
@@ -85,6 +90,7 @@ export default function Navbar() {
         </button>
       </div>
 
+      {/* Mobile Navigation */}
       {menuOpen && (
         <div className="border-t border-white/10 bg-slate-950 px-6 py-4 lg:hidden">
           <div className="mx-auto flex max-w-7xl flex-col gap-1">
@@ -92,6 +98,8 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
+                target={link.isResume ? "_blank" : undefined}
+                rel={link.isResume ? "noopener noreferrer" : undefined}
                 onClick={() => setMenuOpen(false)}
                 className="rounded-lg px-4 py-3 text-sm text-slate-300 transition hover:bg-white/5 hover:text-cyan-400"
               >

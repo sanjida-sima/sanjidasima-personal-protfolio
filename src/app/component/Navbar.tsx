@@ -1,7 +1,7 @@
-
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
-  { label: "Resume", href: "/image/resume.pdf", isResume: true },
+  { label: "Resume", href: "/resume", isResume: true },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -19,7 +19,6 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur-lg">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-
         {/* Logo */}
         <a
           href="#home"
@@ -31,17 +30,25 @@ export default function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-7 text-sm text-slate-300 lg:flex">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              target={link.isResume ? "_blank" : undefined}
-              rel={link.isResume ? "noopener noreferrer" : undefined}
-              className="transition hover:text-cyan-400"
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) =>
+            link.isResume ? (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="transition hover:text-cyan-400"
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.label}
+                href={link.href}
+                className="transition hover:text-cyan-400"
+              >
+                {link.label}
+              </a>
+            ),
+          )}
         </div>
 
         {/* Let's Talk Button */}
@@ -55,7 +62,9 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <button
           type="button"
-          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-label={
+            menuOpen ? "Close navigation menu" : "Open navigation menu"
+          }
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen(!menuOpen)}
           className="rounded-lg border border-white/10 p-2 text-white transition hover:border-cyan-400 lg:hidden"
@@ -97,22 +106,30 @@ export default function Navbar() {
       {menuOpen && (
         <div className="border-t border-white/10 bg-slate-950 px-6 py-4 lg:hidden">
           <div className="mx-auto flex max-w-7xl flex-col gap-1">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                target={link.isResume ? "_blank" : undefined}
-                rel={link.isResume ? "noopener noreferrer" : undefined}
-                onClick={() => setMenuOpen(false)}
-                className="rounded-lg px-4 py-3 text-sm text-slate-300 transition hover:bg-white/5 hover:text-cyan-400"
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) =>
+              link.isResume ? (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="rounded-lg px-4 py-3 text-sm text-slate-300 transition hover:bg-white/5 hover:text-cyan-400"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="rounded-lg px-4 py-3 text-sm text-slate-300 transition hover:bg-white/5 hover:text-cyan-400"
+                >
+                  {link.label}
+                </a>
+              ),
+            )}
           </div>
         </div>
       )}
     </nav>
   );
 }
-

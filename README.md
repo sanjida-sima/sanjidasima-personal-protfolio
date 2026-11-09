@@ -67,4 +67,4 @@ LinkedIn: Connect with me
 Email: simasanjida8@gmail.com
 
 Learning, building, and improving — one project at a time. ✨
-protfolio live link (https://sima-portfolio-2026.vercel.app/)
+protfolio live link (https://moonlit-gingersnap-83cba3.netlify.app/)
